@@ -1,321 +1,189 @@
 
 
-<!DOCTYPE html>
-
-<html lang="es">
-
-<head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<meta name="theme-color" content="#061b25">
-
-<meta name="description" content="MEDIKEL Official Artist. Caribbean Dancehall. Desde Roatán, Honduras y Venezuela para el mundo.">
-
-<meta property="og:title" content="MEDIKEL | Official Artist">
-
-<meta property="og:description" content="Caribbean Dancehall — Desde el Caribe para el mundo.">
-
-<meta property="og:image" content="https://raw.githubusercontent.com/medikelmusic/medikelmusic/132ac6b8ec7ee68e5ae2b4f8c132945be01387e7/5E53F93C-5D9C-494A-8A27-8BABDA5BD830.png">
-
-<title>MEDIKEL | Official Artist</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<section class="music" id="musica">
 
 <style>
 
-:root{--ocean:#062b40;--deep:#06151e;--turquoise:#00c8c5;--gold:#f6c453;--coral:#ff795f;--purple:#9b55a8;--white:#fff;--muted:#c0d0d5}
+.featured-release{
 
-*{margin:0;padding:0;box-sizing:border-box}
+  max-width:900px;
 
-html{scroll-behavior:smooth}
+  margin:35px auto 0;
 
-body{background:var(--deep);color:var(--white);font-family:Montserrat,sans-serif}
+  padding:25px;
 
-a{text-decoration:none;color:inherit}
+  background:linear-gradient(135deg,#123b49,#111329);
 
-header{position:absolute;top:0;left:0;width:100%;z-index:10;padding:18px 7%;display:flex;align-items:center;justify-content:space-between;background:rgba(3,20,30,.75);backdrop-filter:blur(12px);border-bottom:1px solid #ffffff20}
+  border:1px solid #00c8c5;
 
-.logo{display:flex;align-items:center;gap:9px;color:var(--gold);font-weight:900;font-size:25px;letter-spacing:3px}
+  border-radius:12px;
 
-.logo svg{width:37px;height:37px}
+  box-shadow:0 15px 45px #0008;
 
-nav{display:flex;gap:22px}
+}
 
-nav a{font-size:10px;font-weight:800;letter-spacing:1px;transition:.3s}
+.release-label{
 
-nav a:hover{color:var(--turquoise)}
+  display:inline-block;
 
-.hero{min-height:850px;height:100vh;max-height:1050px;position:relative;display:flex;align-items:flex-end;justify-content:center;padding:130px 20px 85px;text-align:center;overflow:hidden}
+  padding:9px 16px;
 
-.hero-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 25%;filter:saturate(.9) contrast(1.05)}
+  background:#f6c453;
 
-.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,20,30,.5),rgba(3,20,30,.05) 35%,rgba(3,20,30,.45) 58%,#06151e 100%)}
+  color:#10212a;
 
-.hero-content{position:relative;z-index:2;max-width:850px}
+  font-size:10px;
 
-.tag{color:var(--turquoise);font-size:11px;font-weight:900;letter-spacing:6px}
+  font-weight:900;
 
-h1{font-size:clamp(55px,12vw,110px);font-weight:900;letter-spacing:5px;line-height:1;margin:18px 0;color:var(--gold);text-shadow:0 5px 30px #000}
+  letter-spacing:2px;
 
-.hero-subtitle{font-size:12px;letter-spacing:4px;font-weight:700}
+  margin-bottom:20px;
 
-.hero-buttons{display:flex;flex-wrap:wrap;justify-content:center;gap:13px;margin-top:30px}
+}
 
-.btn{display:inline-block;padding:16px 24px;border:1px solid var(--gold);font-size:10px;font-weight:900;letter-spacing:1px;transition:.3s}
+.video-frame{
 
-.btn.primary{background:var(--gold);color:#10212a}
+  position:relative;
 
-.btn:hover{transform:translateY(-4px);box-shadow:0 7px 25px #00c8c544}
+  width:100%;
 
-section{padding:85px 8%;text-align:center}
+  aspect-ratio:16/9;
 
-.label{color:var(--turquoise);font-size:10px;font-weight:900;letter-spacing:5px;margin-bottom:15px}
+  overflow:hidden;
 
-.title{font-size:clamp(27px,5vw,42px);font-weight:900;margin-bottom:20px}
+  border-radius:8px;
 
-.gold{color:var(--gold)}
+  background:#000;
 
-.turquoise{color:var(--turquoise)}
+}
 
-.description{max-width:650px;margin:auto;color:var(--muted);font-size:14px;line-height:2}
+.video-frame iframe{
 
-.artist{background:radial-gradient(ellipse at center,#123d4b,#06151e 75%)}
+  position:absolute;
 
-.crown{font-size:48px;color:var(--gold);margin-bottom:15px}
+  inset:0;
 
-.origins{background:#092331}
+  width:100%;
 
-.flags{display:flex;justify-content:center;flex-wrap:wrap;gap:15px;margin-top:30px}
+  height:100%;
 
-.flag{border:1px solid #ffffff30;padding:18px 25px;min-width:145px;font-size:13px;font-weight:800}
+  border:0;
 
-.music{background:#071923}
+}
 
-.release{max-width:650px;margin:30px auto 0;padding:35px 20px;background:linear-gradient(135deg,#123b49,#101d2a);border:1px solid #00c8c566}
+.featured-release h3{
 
-.release h3{color:var(--gold);font-size:20px;letter-spacing:3px;margin-bottom:12px}
+  color:#f6c453;
 
-.release p{color:var(--muted);font-size:12px;line-height:1.8}
+  font-size:27px;
 
-.social{background:linear-gradient(135deg,#102d3d,#111329)}
+  font-weight:900;
 
-.social-links{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin-top:30px}
+  letter-spacing:3px;
 
-.social-link{min-width:150px;padding:18px 22px;border:1px solid #ffffff40;font-size:11px;font-weight:900;letter-spacing:1px;transition:.3s}
+  margin:25px 0 10px;
 
-.social-link:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-4px)}
+}
 
-.contact{background:linear-gradient(135deg,#0b3945,#11182a)}
+.featured-release p{
 
-footer{padding:35px 20px;text-align:center;background:#04121a;border-top:1px solid #ffffff20;color:#a5b6bd;font-size:10px;line-height:2;letter-spacing:2px}
+  color:#c0d0d5;
 
-.footer-logo{font-size:24px;font-weight:900;color:var(--gold);letter-spacing:5px;margin-bottom:8px}
+  font-size:13px;
 
-@media(max-width:650px){
+  line-height:1.8;
 
-header{padding:15px 5%}
+}
 
-.logo{font-size:19px;letter-spacing:2px}
+.release-buttons{
 
-.logo svg{width:29px}
+  display:flex;
 
-nav{gap:10px}
+  flex-wrap:wrap;
 
-nav a{font-size:8px;letter-spacing:0}
+  justify-content:center;
 
-.hero{min-height:760px;height:95vh;padding-bottom:70px}
+  gap:12px;
 
-.hero-photo{object-position:center 20%}
-
-h1{letter-spacing:2px}
-
-.hero-subtitle{font-size:10px;letter-spacing:2px}
-
-section{padding:65px 6%}
-
-.flag{min-width:125px;padding:15px}
+  margin-top:25px;
 
 }
 
 </style>
 
-</head>
+<div class="label">NEW MUSIC · OFFICIAL VIDEO</div>
 
-<body>
+<h2 class="title">
 
-<header>
+MI ÚLTIMO <span class="gold">LANZAMIENTO</span>
 
-<a href="#inicio" class="logo">
+</h2>
 
-<svg viewBox="0 0 100 100" fill="none" aria-label="Corona MEDIKEL">
+<p class="description">
 
-<path d="M12 72 L20 28 L40 51 L50 12 L62 51 L82 28 L89 72 Z" stroke="#f6c453" stroke-width="7" stroke-linejoin="round"/>
+El sonido del Caribe. Dale play y disfruta de la música oficial de MEDIKEL.
 
-<path d="M15 83 H86" stroke="#00c8c5" stroke-width="7"/>
+</p>
 
-</svg>
+<div class="featured-release">
 
-MEDIKEL
+  <div class="release-label">♛ OUT NOW · MEDIKEL</div>
 
-</a>
+  <div class="video-frame">
 
-<nav>
+    <iframe
 
-<a href="#inicio">INICIO</a>
+      src="https://www.youtube-nocookie.com/embed/a9VfgJ_FiAo"
 
-<a href="#musica">MÚSICA</a>
+      title="Último lanzamiento oficial de MEDIKEL"
 
-<a href="#artista">ARTISTA</a>
+      loading="lazy"
 
-<a href="#contacto">CONTACTO</a>
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 
-</nav>
+      referrerpolicy="strict-origin-when-cross-origin"
 
-</header>
+      allowfullscreen>
 
-<main>
+    </iframe>
 
-<div class="hero" id="inicio">
+  </div>
 
-<img class="hero-photo" src="https://raw.githubusercontent.com/medikelmusic/medikelmusic/132ac6b8ec7ee68e5ae2b4f8c132945be01387e7/5E53F93C-5D9C-494A-8A27-8BABDA5BD830.png" alt="MEDIKEL Official Artist">
+  <h3>MEDIKEL</h3>
 
-<div class="hero-content">
+  <p>
 
-<div class="tag">CARIBBEAN DANCEHALL</div>
+    ÚLTIMO LANZAMIENTO OFICIAL<br>
 
-<h1>MEDIKEL</h1>
+    CARIBBEAN DANCEHALL · VENEZUELA × HONDURAS
 
-<p class="hero-subtitle">VENEZUELA × HONDURAS</p>
+  </p>
 
-<div class="hero-buttons">
+  <div class="release-buttons">
 
-<a class="btn primary" href="https://www.instagram.com/medikelmusic/" target="_blank" rel="noopener">INSTAGRAM OFICIAL</a>
+    <a class="btn primary"
 
-<a class="btn" href="#musica">MI MÚSICA</a>
+       href="https://youtu.be/a9VfgJ_FiAo"
 
-<a class="btn" href="#contacto">CONTRATACIONES</a>
+       target="_blank" rel="noopener">
 
-</div>
+       VER EN YOUTUBE
 
-</div>
+    </a>
 
-</div>
+    <a class="btn"
 
-<section class="artist" id="artista">
+       href="https://www.instagram.com/medikelmusic/"
 
-<div class="crown">♛</div>
+       target="_blank" rel="noopener">
 
-<div class="label">OFFICIAL ARTIST</div>
+       COMPARTIR EN INSTAGRAM
 
-<h2 class="title">THE <span class="gold">MEDIKEL</span> EXPERIENCE</h2>
+    </a>
 
-<p class="description">Una identidad, dos raíces y un solo sonido. MEDIKEL representa la energía del dancehall caribeño, fusionando cultura, ritmo y actitud desde Venezuela y Honduras para el mundo.</p>
-
-</section>
-
-<section class="origins">
-
-<div class="label">MIS RAÍCES</div>
-
-<h2 class="title">DESDE EL <span class="turquoise">CARIBE</span></h2>
-
-<p class="description">Roatán, Honduras y Venezuela forman parte de mi identidad. Tres referencias, una cultura y un sonido que cruza fronteras.</p>
-
-<div class="flags">
-
-<div class="flag">🇭🇳 HONDURAS</div>
-
-<div class="flag">🇻🇪 VENEZUELA</div>
-
-<div class="flag">🌴 ROATÁN</div>
+  </div>
 
 </div>
 
 </section>
-
-<section class="music" id="musica">
-
-<div class="label">LISTEN & WATCH</div>
-
-<h2 class="title">MÚSICA <span class="gold">OFICIAL</span></h2>
-
-<p class="description">Descubre los lanzamientos, canciones y videos oficiales de MEDIKEL.</p>
-
-<div class="release">
-
-<h3>NEW MUSIC COMING</h3>
-
-<p>Nuevos sonidos del Caribe. Mantente conectado para los próximos lanzamientos.</p>
-
-<div class="hero-buttons">
-
-<a class="btn primary" href="https://www.youtube.com/@medikelmusic" target="_blank" rel="noopener">YOUTUBE</a>
-
-<a class="btn" href="https://open.spotify.com/" target="_blank" rel="noopener">SPOTIFY</a>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="social">
-
-<div class="label">FOLLOW THE MOVEMENT</div>
-
-<h2 class="title">SÍGUEME EN <span class="gold">REDES</span></h2>
-
-<p class="description">Forma parte del movimiento MEDIKEL. Música, cultura y contenido caribeño.</p>
-
-<div class="social-links">
-
-<a class="social-link" href="https://www.instagram.com/medikelmusic/" target="_blank" rel="noopener">INSTAGRAM</a>
-
-<a class="social-link" href="https://www.tiktok.com/@medikelmusic" target="_blank" rel="noopener">TIKTOK</a>
-
-<a class="social-link" href="https://www.youtube.com/@medikelmusic" target="_blank" rel="noopener">YOUTUBE</a>
-
-</div>
-
-</section>
-
-<section class="contact" id="contacto">
-
-<div class="label">BOOKING & BUSINESS</div>
-
-<h2 class="title">CONTRATACIONES <span class="gold">OFICIALES</span></h2>
-
-<p class="description">Para presentaciones, colaboraciones y proyectos musicales, contáctame a través de Instagram.</p>
-
-<div class="hero-buttons">
-
-<a class="btn primary" href="https://www.instagram.com/medikelmusic/" target="_blank" rel="noopener">CONTACTAR A MEDIKEL</a>
-
-</div>
-
-</section>
-
-</main>
-
-<footer>
-
-<div class="footer-logo">♛ MEDIKEL</div>
-
-<p>OFFICIAL ARTIST · CARIBBEAN DANCEHALL</p>
-
-<p>ROATÁN · HONDURAS · VENEZUELA</p>
-
-<p>© 2026 MEDIKEL. TODOS LOS DERECHOS RESERVADOS.</p>
-
-<p>DESDE EL CARIBE PARA EL MUNDO.</p>
-
-</footer>
-
-</body>
-
-</html>
